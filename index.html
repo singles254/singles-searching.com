@@ -4,117 +4,781 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>The Singles Planet - Seats 1 to 5</title>
+    <title>The Singles Planet - Seats 1 to 47</title>
 
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="main-title">SINGLES & SEARCHING</div>
-
-      <div class="profiles">
-        <!-- SEAT 1 -->
-        <div class="card">
-          <div class="seat">seat 1</div>
-
-          <div class="profile">
-            <div><strong>Name:</strong> Peter</div>
-            <div><strong>Age:</strong> 33 Years</div>
-            <div><strong>Gender:</strong> male</div>
-            <div><strong>Tribe:</strong> Luo</div>
-            <div><strong>Job:</strong> Hotelier</div>
-            <div><strong>Location:</strong> Kisumu City</div>
-          </div>
-
-          <div class="seeking">
-            💕 Seeking:<br />
-            A Marriage Partner
-          </div>
-          <a class="phone" href="https://wa.me/254701839775" target="_blank">
-            📞 +254701839775</a
-          >
-
-          <div class="footer">
-            Real People • Genuine Connections • God’s Plan
-          </div>
-        </div>
-        <!-- SEAT 1 -->
-        <div class="card">
-          <div class="seat">seat 1</div>
-
-          <div class="profile">
-            <div><strong>Name:</strong> Peter</div>
-            <div><strong>Age:</strong> 33 Years</div>
-            <div><strong>Gender:</strong> male</div>
-            <div><strong>Tribe:</strong> Luo</div>
-            <div><strong>Job:</strong> Hotelier</div>
-            <div><strong>Location:</strong> Kisumu City</div>
-          </div>
-
-          <div class="seeking">
-            💕 Seeking:<br />
-            A Marriage Partner
-          </div>
-          <a class="phone" href="https://wa.me/254701839775" target="_blank">
-            📞 +254701839775</a
-          >
-
-          <div class="footer">
-            Real People • Genuine Connections • God’s Plan
-          </div>
-        </div>
-        <!-- SEAT 1 -->
-        <div class="card">
-          <div class="seat">seat 1</div>
-
-          <div class="profile">
-            <div><strong>Name:</strong> Peter</div>
-            <div><strong>Age:</strong> 33 Years</div>
-            <div><strong>Gender:</strong> male</div>
-            <div><strong>Tribe:</strong> Luo</div>
-            <div><strong>Job:</strong> Hotelier</div>
-            <div><strong>Location:</strong> Kisumu City</div>
-          </div>
-
-          <div class="seeking">
-            💕 Seeking:<br />
-            A Marriage Partner
-          </div>
-          <a class="phone" href="https://wa.me/254701839775" target="_blank">
-            📞 +254701839775</a
-          >
-
-          <div class="footer">
-            Real People • Genuine Connections • God’s Plan
-          </div>
-        </div>
-        <!-- SEAT 1 -->
-        <div class="card">
-          <div class="seat">seat 1</div>
-
-          <div class="profile">
-            <div><strong>Name:</strong> Peter</div>
-            <div><strong>Age:</strong> 33 Years</div>
-            <div><strong>Gender:</strong> male</div>
-            <div><strong>Tribe:</strong> Luo</div>
-            <div><strong>Job:</strong> Hotelier</div>
-            <div><strong>Location:</strong> Kisumu City</div>
-          </div>
-
-          <div class="seeking">
-            💕 Seeking:<br />
-            A Marriage Partner
-          </div>
-          <a class="phone" href="https://wa.me/254701839775" target="_blank">
-            📞 +254701839775</a
-          >
-
-          <div class="footer">
-            Real People • Genuine Connections • God’s Plan
-          </div>
-        </div>
+      <div class="main-title">
+        SINGLES & SEARCHING <em class="red">FASTLANE</em>
       </div>
+
+      <!-- PROFILES WILL BE CREATED AUTOMATICALLY HERE -->
+      <div class="profiles" id="profiles-container"></div>
     </div>
+
+    <script>
+      // ==========================================
+      // PROFILE DATA
+      // ==========================================
+
+      const profiles = [
+        {
+          name: "Alex",
+          age: "21 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Doctor",
+          location: "Nairobi",
+          phone: "0748999583",
+        },
+        {
+          name: "Jane",
+          age: "32 Years",
+          gender: "Female",
+          tribe: "Kikuyu/Kamba",
+          job: "Data Analyst",
+          location: "Kiambu",
+          phone: "0718217396",
+        },
+        {
+          name: "Faustina Florence Wairimu Maina",
+          age: "35 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Technical store clerk",
+          location: "Nakuru, Kenya",
+          phone: "0707283411",
+        },
+        {
+          name: "Josphat",
+          age: "34 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Water engineer",
+          location: "Kisumu",
+          phone: "0723124676",
+        },
+        {
+          name: "Maya",
+          age: "35 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Procurement",
+          location: "Nairobi",
+          phone: "0712918579",
+        },
+        {
+          name: "Edwin",
+          age: "28 Years",
+          gender: "Male",
+          tribe: "Luhya",
+          job: "Cheff",
+          location: "Nairobi",
+          phone: "0702303152",
+        },
+        {
+          name: "Ryzer Tammie",
+          age: "30 Years",
+          gender: "Female",
+          tribe: "Luhya",
+          job: "Hotelian",
+          location: "Nairobi",
+          phone: "0794171864",
+        },
+        {
+          name: "Minah Wangechi Waweru",
+          age: "32 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Business owner",
+          location: "Nairobi",
+          phone: "0706296336",
+        },
+        {
+          name: "Sifuna",
+          age: "26 Years",
+          gender: "Male",
+          tribe: "Luhya",
+          job: "Cook",
+          location: "Kenya",
+          phone: "+19123765957",
+        },
+        {
+          name: "Tracy Kamau",
+          age: "29 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "CHW",
+          location: "Diani",
+          phone: "0725366160",
+        },
+        {
+          name: "Victor",
+          age: "26 Years",
+          gender: "Male",
+          tribe: "Luhya",
+          job: "Steel fixing and welding",
+          location: "Nairobi",
+          phone: "0757720822",
+        },
+        {
+          name: "Nyoks",
+          age: "28 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Cooking",
+          location: "GULF",
+          phone: "0797047254",
+        },
+        {
+          name: "Regina Wambui",
+          age: "32 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Lecturer",
+          location: "Thika",
+          phone: "0114386242",
+        },
+        {
+          name: "Nicholus",
+          age: "25 Years",
+          gender: "Male",
+          tribe: "Kamba",
+          job: "IT specialist",
+          location: "Nairobi",
+          phone: "0758007646",
+        },
+        {
+          name: "Getrude",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Kisii",
+          job: "Hair dresser",
+          location: "Kisii",
+          phone: "0725031460",
+        },
+        {
+          name: "Joy Mwangi",
+          age: "30 Years",
+          gender: "Female",
+          tribe: "N/A",
+          job: "N/A",
+          location: "Kenya",
+          phone: "0701906666",
+        },
+        {
+          name: "Laban",
+          age: "28 Years",
+          gender: "Male",
+          tribe: "Kalenjin",
+          job: "Business Development",
+          location: "Nairobi",
+          phone: "0745058490",
+        },
+        {
+          name: "Benard Macharia",
+          age: "27 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Hustle",
+          location: "Nairobi Kenya",
+          phone: "0796728135",
+        },
+        {
+          name: "James",
+          age: "30 Years",
+          gender: "Male",
+          tribe: "Kenyan",
+          job: "Job",
+          location: "Kianjogu",
+          phone: "+254759582115",
+        },
+        {
+          name: "Loreen",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Kamba/Kikuyu",
+          job: "Cook",
+          location: "Nairobi",
+          phone: "0792674047",
+        },
+        {
+          name: "Simon Kihara",
+          age: "25 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Automotive engineer",
+          location: "Nakuru",
+          phone: "0745593494",
+        },
+        {
+          name: "Jack",
+          age: "28 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Technician",
+          location: "Babadogo Nairobi",
+          phone: "0798947351",
+        },
+        {
+          name: "Kate",
+          age: "42 Years",
+          gender: "Female",
+          tribe: "Not important",
+          job: "Social worker",
+          location: "Nairobi",
+          phone: "0712137002",
+        },
+        {
+          name: "Jaime",
+          age: "25 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Data Analyst",
+          location: "Kiambu road",
+          phone: "0768800806",
+        },
+        {
+          name: "Mercy",
+          age: "33 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Kindergarten teacher",
+          location: "Nairobi",
+          phone: "+254721369877",
+        },
+        {
+          name: "Godwin Gisore",
+          age: "30 Years",
+          gender: "Male",
+          tribe: "Kisii",
+          job: "Chef",
+          location: "Nairobi",
+          phone: "0746484098",
+        },
+        {
+          name: "Kenedy",
+          age: "36 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Researcher",
+          location: "Kisumu",
+          phone: "0731359759",
+        },
+        {
+          name: "George",
+          age: "24 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Hustle",
+          location: "Rongai",
+          phone: "0740963946",
+        },
+        {
+          name: "Peter",
+          age: "25 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Employed",
+          location: "Nakuru currently Kiambu",
+          phone: "0705772735",
+        },
+        {
+          name: "WINNIE",
+          age: "34 Years",
+          gender: "Female",
+          tribe: "KIKUYU",
+          job: "FINANCE",
+          location: "NAIROBI",
+          phone: "0716614663",
+        },
+        {
+          name: "Ann",
+          age: "29 Years",
+          gender: "Female",
+          tribe: "Kamba",
+          job: "Business owner",
+          location: "Mombasa",
+          phone: "0715771410",
+        },
+        {
+          name: "Wairimu",
+          age: "39 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Employed",
+          location: "Thika road",
+          phone: "0720493121",
+        },
+        {
+          name: "Cecilia Kalafa",
+          age: "33 Years",
+          gender: "Female",
+          tribe: "Luhya",
+          job: "Hospitality",
+          location: "Nairobi",
+          phone: "0736764031",
+        },
+        {
+          name: "Josephine Muthoni",
+          age: "48 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Administration",
+          location: "Nairobi",
+          phone: "0721772130",
+        },
+        {
+          name: "Simon",
+          age: "28 Years",
+          gender: "Male",
+          tribe: "Kikiyu",
+          job: "Banker",
+          location: "Meru",
+          phone: "0796140489",
+        },
+        {
+          name: "Steve",
+          age: "24 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Driver",
+          location: "Kisumu",
+          phone: "0795071608",
+        },
+        {
+          name: "Lisa Kamau",
+          age: "40 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Business woman",
+          location: "Nyandarua",
+          phone: "0701100882",
+        },
+        {
+          name: "Angela",
+          age: "28 Years, 10 Months",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Nurse",
+          location: "Kiambu County, Gachie",
+          phone: "0712138532",
+        },
+        {
+          name: "Julita Jemunga",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Kamba",
+          job: "Business woman",
+          location: "Namanga border",
+          phone: "0726712550",
+        },
+        {
+          name: "Koskei Brian",
+          age: "22 Years",
+          gender: "Male",
+          tribe: "Kalenjin",
+          job: "Entrepreneur",
+          location: "Kiambu",
+          phone: "0753987617",
+        },
+        {
+          name: "Jeff",
+          age: "34 Years",
+          gender: "Male",
+          tribe: "Kuria/Luhya",
+          job: "Teacher",
+          location: "Nairobi",
+          phone: "0720973542",
+        },
+        {
+          name: "Racheal Kiarie",
+          age: "29 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Receptionist",
+          location: "Kiambu",
+          phone: "0798092745",
+        },
+        {
+          name: "Kevin",
+          age: "36 Years",
+          gender: "Male",
+          tribe: "Luo",
+          job: "Business",
+          location: "Nakuru",
+          phone: "0101150057",
+        },
+        {
+          name: "Jackie",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Baganda",
+          job: "Education",
+          location: "Kiambu",
+          phone: "0792795014",
+        },
+        {
+          name: "Shillah Mercy",
+          age: "29 Years",
+          gender: "Female",
+          tribe: "Kenyan",
+          job: "Hair dresser",
+          location: "Middle East",
+          phone: "590723549",
+        },
+        {
+          name: "Miriam",
+          age: "29 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Teacher",
+          location: "Nyeri",
+          phone: "0740235911",
+        },
+        {
+          name: "Diana",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Kalenjin",
+          job: "Travel consultant",
+          location: "Nairobi",
+          phone: "0725134280",
+        },
+
+        {
+          name: "Faith",
+          age: "31 Years",
+          gender: "Female",
+          tribe: "Luyha",
+          job: "Health Records and Information Technician",
+          location: "Kenya",
+          phone: "254747000000",
+        },
+
+        {
+          name: "Precious",
+          age: "34 Years",
+          gender: "Female",
+          tribe: "Luhya",
+          job: "None",
+          location: "Nairobi",
+          phone: "0784214323",
+        },
+
+        {
+          name: "Manix",
+          age: "26 Years",
+          gender: "Male",
+          tribe: "Luhya",
+          job: "Music",
+          location: "Eldoret",
+          phone: "0759121664",
+        },
+
+        {
+          name: "Chrispine Nyabuto Mbunde",
+          age: "27 Years",
+          gender: "Male",
+          tribe: "Kisii",
+          job: "Casual labourer in a company",
+          location: "Kikuyu Nderi",
+          phone: "0796650620",
+        },
+
+        {
+          name: "Julie",
+          age: "32 Years",
+          gender: "Female",
+          tribe: "Mijikenda - Chonyi",
+          job: "Nurse",
+          location: "Mombasa",
+          phone: "254743000000",
+        },
+
+        {
+          name: "Mercy Wanjiru",
+          age: "30 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Beautician",
+          location: "Thika",
+          phone: "0712563297",
+        },
+
+        {
+          name: "Sammy",
+          age: "27 Years",
+          gender: "Male",
+          tribe: "Kalenjin",
+          job: "Barista",
+          location: "Mbagathi, Nairobi",
+          phone: "0755275641",
+        },
+
+        {
+          name: "Jacqueline",
+          age: "37 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Librarian",
+          location: "Nairobi",
+          phone: "0106293031",
+        },
+
+        {
+          name: "Harry",
+          age: "27 Years",
+          gender: "Male",
+          tribe: "Kalenjin",
+          job: "Teacher",
+          location: "Nakuru",
+          phone: "0751515303",
+        },
+
+        {
+          name: "Bryan",
+          age: "40 Years",
+          gender: "Male",
+          tribe: "Kisii",
+          job: "Logistics n finance",
+          location: "Nairobi",
+          phone: "0768339486",
+        },
+
+        {
+          name: "Marvis Ndungu",
+          age: "27 Years",
+          gender: "Male",
+          tribe: "Kikuyu",
+          job: "Photography",
+          location: "Nairobi",
+          phone: "0111704668",
+        },
+
+        {
+          name: "She Whitney",
+          age: "26 Years",
+          gender: "Female",
+          tribe: "Kalenjin",
+          job: "Businesslady",
+          location: "Kiambu",
+          phone: "0723785163",
+        },
+
+        {
+          name: "John Kingi",
+          age: "42 Years",
+          gender: "Male",
+          tribe: "Kisii",
+          job: "HSE",
+          location: "Kitengela",
+          phone: "0727740374",
+        },
+
+        {
+          name: "Anne",
+          age: "24 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Librarian",
+          location: "Kiambu",
+          phone: "0759967446",
+        },
+
+        {
+          name: "Tabby",
+          age: "25 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Business management",
+          location: "Nairobi",
+          phone: "0718256599",
+        },
+
+        {
+          name: "Margaret",
+          age: "27 Years",
+          gender: "Female",
+          tribe: "Kamba",
+          job: "Teacher",
+          location: "Nairobi",
+          phone: "0705159909",
+        },
+
+        {
+          name: "Bella",
+          age: "28 Years",
+          gender: "Female",
+          tribe: "Kikuyu",
+          job: "Sales lady",
+          location: "Nairobi",
+          phone: "0799235616",
+        },
+
+        {
+          name: "Summer",
+          age: "39 Years",
+          gender: "Female",
+          tribe: "Meru",
+          job: "Legal",
+          location: "Meru",
+          phone: "0734911515",
+        },
+      ];
+
+      // ==========================================
+      // NORMALIZE PHONE NUMBERS
+      // ==========================================
+
+      function normalizePhone(phone) {
+        let number = String(phone)
+          .replace(/O/g, "0")
+          .replace(/o/g, "0")
+          .replace(/\D/g, "");
+
+        // Kenyan number beginning with 0
+        if (number.startsWith("0")) {
+          return "254" + number.substring(1);
+        }
+
+        // Kenyan number beginning with 254
+        if (number.startsWith("254")) {
+          return number;
+        }
+
+        // 9-digit Kenyan number
+        if (number.length === 9 && number.startsWith("7")) {
+          return "254" + number;
+        }
+
+        // Keep foreign numbers as they are
+        return number;
+      }
+
+      // ==========================================
+      // REMOVE DUPLICATES
+      // ==========================================
+
+      const uniqueProfiles = [];
+      const seenPhones = new Set();
+      const seenProfiles = new Set();
+
+      profiles.forEach((profile) => {
+        const phoneKey = normalizePhone(profile.phone);
+
+        const profileKey =
+          profile.name.toLowerCase().trim() +
+          "|" +
+          profile.age.toLowerCase().trim() +
+          "|" +
+          profile.location.toLowerCase().trim();
+
+        // Duplicate phone number
+        if (seenPhones.has(phoneKey)) {
+          return;
+        }
+
+        // Duplicate name + age + location
+        if (seenProfiles.has(profileKey)) {
+          return;
+        }
+
+        seenPhones.add(phoneKey);
+        seenProfiles.add(profileKey);
+
+        uniqueProfiles.push(profile);
+      });
+
+      // ==========================================
+      // CREATE PROFILE CARDS
+      // ==========================================
+
+      const container = document.getElementById("profiles-container");
+
+      uniqueProfiles.forEach((profile, index) => {
+        const card = document.createElement("div");
+
+        card.className = "card";
+
+        const phone = normalizePhone(profile.phone);
+
+        card.innerHTML = `
+
+          <div class="seat">
+            seat ${index + 1}
+          </div>
+
+
+          <div class="profile">
+
+            <div>
+              <strong>Name:</strong>
+              ${profile.name}
+            </div>
+
+            <div>
+              <strong>Age:</strong>
+              ${profile.age}
+            </div>
+
+            <div>
+              <strong>Gender:</strong>
+              ${profile.gender}
+            </div>
+
+            <div>
+              <strong>Tribe:</strong>
+              ${profile.tribe}
+            </div>
+
+            <div>
+              <strong>Job:</strong>
+              ${profile.job}
+            </div>
+
+            <div>
+              <strong>Location:</strong>
+              ${profile.location}
+            </div>
+
+          </div>
+
+
+          <div class="seeking">
+            💕 Seeking:<br />
+            A Marriage Partner
+          </div>
+
+
+          <a
+            class="phone"
+            href="https://wa.me/${phone}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📞 +${phone}
+          </a>
+
+
+          <div class="footer">
+            Real People • Genuine Connections • God’s Plan
+          </div>
+
+        `;
+
+        container.appendChild(card);
+      });
+
+      // ==========================================
+      // OPTIONAL CONSOLE INFORMATION
+      // ==========================================
+
+      console.log("Profiles received:", profiles.length);
+      console.log("Unique profiles displayed:", uniqueProfiles.length);
+    </script>
   </body>
 </html>
