@@ -5,7 +5,120 @@
         background: #f2eee8;
         font-family: Georgia, serif;
       }
+  * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff5f5, #f3e8ff);
+      color: #333;
+    }
+
+    .intro-container {
+      max-width: 650px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .intro-container h1 {
+      color: #6b46c1;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .intro-container h2 {
+      color: #b8860b;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .intro-container p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 12px 0;
+    }
+
+    .highlight {
+      background: #f3e8ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #5b21b6;
+    }
+
+    .contact-box {
+      background: #fafafa;
+      border: 1px solid #e5d5ff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .contact-box h3 {
+      color: #6b46c1;
+      margin-top: 0;
+    }
+
+    .contact-number {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 14px auto;
+      padding: 15px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .call-btn {
+      background: #6b46c1;
+      color: white;
+    }
+
+    .register-btn {
+      background: #b8860b;
+      color: white;
+      margin-top: 25px;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .note {
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #777;
+    }
       .container {
         max-width: 900px;
         margin: auto;
@@ -90,4 +203,24 @@
       .red{
         color: red;
       }
-  
+.next-page-container {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.next-page-btn {
+  display: inline-block;
+  background: #6b46c1;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.next-page-btn:hover {
+  background: #55309b;
+}
